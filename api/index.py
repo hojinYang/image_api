@@ -16,4 +16,4 @@ def sample():
     image_files = [img for img in images]
     selected_image = random.choice(image_files)
     #return send_file(os.path.join(IMAGE_DIR, selected_image), mimetype='image/jpg')
-    return send_file( "/images/"+selected_image, mimetype='image/jpg')
+    return send_file( "images/"+selected_image, mimetype='image/jpg')
