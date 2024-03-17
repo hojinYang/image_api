@@ -12,6 +12,7 @@ def home():
 @app.route('/sample')
 def sample():
     images = os.listdir(IMAGE_DIR)
+    print(images)
     image_files = [img for img in images]
     selected_image = random.choice(image_files)
     return send_file(os.path.join(IMAGE_DIR, selected_image), mimetype='image/jpg')
